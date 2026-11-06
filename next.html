@@ -1,59 +1,101 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Next Steps</title>
-<link href="_css/styles.css" rel="stylesheet" type="text/css">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Creating Links</title>
+  <link rel="stylesheet" href="_css/styles.css">
 </head>
+
 <body>
-<h1>CIT 384</h1>
-<h2>Next Steps</h2>
-<ul>
-  <li><a href="index.html" title="Introduction to HTML">Introduction to HTML</a></li>
-  <li><a href="syntax.html" title="HTML syntax">HTML syntax</a></li>
-  <li><a href="structure.html" title="Structuring pages">Structuring pages</a></li>
-  <li><a href="links.html" title="Creating links">Creating links</a></li>
-  <li><a href="reference.html" title="HTML Reference">HTML reference</a></li>
-  <li><a href="next.html" title="Next steps">Next steps</a></li>
-</ul>
-<p>Once you master the basics of authoring HTML, you&rsquo;ll need focus on what your next steps will be. If you&rsquo;re an aspiring web designer, you&rsquo;ll need to dive deeper into HTML, CSS, and JavaScript. If you&rsquo;re maintaining a corporate or personal site through a CMS, you&rsquo;ll need to focus on how the CMS works, and the most efficient ways to edit and maintain content. On this page I&rsquo;ll give you some basic advice on how to approach learning web design and point you towards additional resources that can help you along the way.</p>
-<h3>Learning Web Design</h3>
-<p>&ldquo;Web design&rdquo; is a pretty open-ended term. Often people who are new to web design feel overwhelmed at everything there is to learn. That&rsquo;s understandable, but just remember that it&rsquo;s like any other discipline; with proper dedication and focus you&rsquo;ll progress quickly. Here&rsquo;s my favorite advice to new web designers on learning web design:</p>
-<p><strong>Learn how the web works.</strong><br>
-  I&rsquo;m always amazed at how many web designers focus on learning &ldquo;just what they need to know&rdquo; and ignore how the web actually works. Without understanding how web servers, protocols, browsers, and other related web technology works, you&rsquo;ll never really understand the context behind why you do the things you do, and what makes one practice better than another.</p>
-<p><strong>Determine an area of focus, and start there.</strong><br>
-  There are a lot of areas of web design that you could specialize in, so I&rsquo;d recommend learning as much about them as you can, to determine which areas interest you. Then, spend as much time learning about your specific area of focus as possible. Once you achieve a level of proficiency, begin to branch out into other areas as well. </p>
-<p><strong>Never stop learning</strong><br>
-  The web is constantly evolving. Even if you become the absolute best there is in a specific field, chances are new techniques and approaches will come along within the year that will make your current skill set less desirable. Understand that being a good web designer means embracing the changing nature of the web.</p>
-<p><strong>Break things!</strong><br>
-  There is no better teacher than experience. Build and experiment constantly. Ask yourself, &ldquo;<i>what would happen if I?...</i>&rdquo; or &ldquo;<i>wonder if I could build?...</i>&rdquo; and then go out and build it. If you&rsquo;re like me, you&rsquo;ll fail a good bit of the time, but the process of trying things and breaking them will make you that much better. <em>Always challenge yourself</em>.</p>
-<h3>Web Design Resources</h3>
-<ul>
-  <li><b>HTML specifications</b>
-    <ul>
-      <li>Although their format can be a bit hard to read initially, once you&rsquo;re familiar with them there is no better resource for learning HTML and staying current with it than reading the actual W3C specifications.</li>
-      <li><a href="http://www.w3.org/TR/html401" title="html 4 specification">HTML 4.0</a></li>
-      <li><a href="http://www.w3.org/TR/xhtml1" title="xhtml 1 specification">XHTML 1.0</a></li>
-      <li><a href="http://developers.whatwg.org" title="html 5, WHATWG edition">WHATWG HTML5</a></li>
-      <li><a href="http://www.w3.org/TR/html5">W3C HTML5</a></li>
-    </ul>
-  </li>
-  <li><a href="http://validator.w3.org" title="W3C markup validator"><b>W3C Markup Validation Service</b></a>
-    <ul>
-      <li>Great for testing code and making sure you&rsquo;re writing valid HTML syntax.</li>
-    </ul>
-  </li>
-  <li><a href="https://developer.mozilla.org/en-US" title="Mozilla developer network"><b>Mozilla Developer Network</b></a>
-    <ul>
-      <li>One of the best online resources for web designers and developers. Great collection of articles, tutorials, and references.</li>
-    </ul>
-  </li>
-  <li><a href="http://www.html5rocks.com" title="HTML 5 rocks"><b>HTML5 Rocks</b></a>
-    <ul>
-      <li>Once you&rsquo;ve got the basics down, check out sites like HTML5 Rocks. This site feature articles, tutorials, and other resources that help you keep up with the evolving web. </li>
-    </ul>
-  </li>
-</ul>
-<p><a href="http://www.csun.edu" title="csun.edu" target="_blank">CSUN</a> 18111 Nordhoff St Northridge, CA 91330</p>
+  <header>
+    <h1>CIT 384</h1>
+    <h2>Creating Links</h2>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Introduction to HTML</a></li>
+        <li><a href="syntax.html">HTML syntax</a></li>
+        <li><a href="structure.html">Structuring pages</a></li>
+        <li><a href="links.html" aria-current="page">Creating links</a></li>
+        <li><a href="reference.html">HTML reference</a></li>
+        <li><a href="next.html">Next steps</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <section aria-labelledby="introduction">
+        <h3 id="introduction">Introduction</h3>
+        <p>
+          Perhaps the most important aspect of HTML is the ability to link from one document to another. This is the basic concept underlying the web, and without this functionality the World Wide Web would not exist.
+        </p>
+      </section>
+
+      <section aria-labelledby="link-syntax">
+        <h3 id="link-syntax">Link syntax</h3>
+        <p>
+          Creating links is relatively straightforward, and the syntax provides flexibility in where and how links are applied. To create a link, use the anchor element (&lt;a&gt;) to wrap the content you want to make clickable. The <code>href</code> attribute tells the browser where the link should go. Here is an example:
+        </p>
+        <pre><code>&lt;a href="syntax.html"&gt;HTML syntax&lt;/a&gt;</code></pre>
+        <p>
+          In this example, “HTML syntax” appears as a clickable link. The <code>href</code> attribute tells the browser where to direct the user.
+        </p>
+      </section>
+
+      <section aria-labelledby="link-types">
+        <h3 id="link-types">Link types</h3>
+        <p>
+          Three common link types are absolute, document-relative, and site-root-relative links. Each uses the <code>href</code> attribute to tell the browser how to locate the destination.
+        </p>
+
+        <section aria-labelledby="absolute-links">
+          <h4 id="absolute-links">Absolute links</h4>
+          <p>
+            Absolute links contain the full URL, including the protocol. They are commonly used to link to pages outside your site:
+          </p>
+          <pre><code>&lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;</code></pre>
+        </section>
+
+        <section aria-labelledby="document-relative-links">
+          <h4 id="document-relative-links">Document-relative links</h4>
+          <p>
+            Document-relative links give the path from the current page to the destination page. If both pages are in the same folder, the link might look like this:
+          </p>
+          <pre><code>&lt;a href="contact.html"&gt;Contact us&lt;/a&gt;</code></pre>
+          <p>If the destination is in a folder below the current page, include that folder in the path:</p>
+          <pre><code>&lt;a href="resources/contact.html"&gt;Contact us&lt;/a&gt;</code></pre>
+          <p>To move up to the parent folder, use <code>../</code>:</p>
+          <pre><code>&lt;a href="../contact.html"&gt;Contact us&lt;/a&gt;</code></pre>
+        </section>
+
+        <section aria-labelledby="site-root-links">
+          <h4 id="site-root-links">Site-root-relative links</h4>
+          <p>
+            Site-root-relative links start at the website’s root folder. They begin with a forward slash:
+          </p>
+          <pre><code>&lt;a href="/contact.html"&gt;Contact us&lt;/a&gt;</code></pre>
+          <p>If the destination is in a folder, include the folder in the path:</p>
+          <pre><code>&lt;a href="/resources/contact.html"&gt;Contact us&lt;/a&gt;</code></pre>
+        </section>
+      </section>
+
+      <section aria-labelledby="fragment-identifiers">
+        <h3 id="fragment-identifiers">Fragment identifiers</h3>
+        <p>
+          A fragment identifier links to a specific location on a page. Give the destination element an <code>id</code>, such as:
+        </p>
+        <pre><code>&lt;h2 id="camp"&gt;Camping&lt;/h2&gt;</code></pre>
+        <p>Then link to that ID using a hash symbol:</p>
+        <pre><code>&lt;a href="#camp"&gt;Learn more about camping&lt;/a&gt;</code></pre>
+        <p>You can also link to an ID on another page:</p>
+        <pre><code>&lt;a href="faq.html#camp"&gt;Read our FAQ on camping&lt;/a&gt;</code></pre>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>
+      <a href="https://www.csun.edu" target="_blank" rel="noopener noreferrer">CSUN</a>
+      18111 Nordhoff St, Northridge, CA 91330
+    </p>
+  </footer>
 </body>
 </html>
